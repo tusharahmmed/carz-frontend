@@ -1,13 +1,29 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: g-medium;
+  src: url(./fonts/gotham-medium.otf);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: g-book;
+  src: url(./fonts/gotham-book.otf);
+}
+
+@font-face {
+  font-family: g-ssm;
+  src: url(./fonts/GothamSSm-Medium.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: #393C41;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body{
+  overflow-x: hidden;
+}
+.swal-modal{
+  font-family: g-ssm;
 }
