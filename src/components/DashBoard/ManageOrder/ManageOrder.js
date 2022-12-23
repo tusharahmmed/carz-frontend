@@ -8,7 +8,7 @@ const ManageOrder = () => {
     const [allOrders, setAllOrders] = useState({});
 
     useEffect(() => {
-        fetch(`https://damp-bayou-69353.herokuapp.com/all-order`)
+        fetch(`https://carz-server.onrender.com/all-order`)
             .then(res => res.json())
             .then(data => setAllOrders(data));
     }, [allOrders]);

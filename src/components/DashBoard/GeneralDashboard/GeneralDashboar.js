@@ -24,7 +24,7 @@ const GeneralDashboar = () => {
     const [products, setProducts] = useState({});
 
     useEffect(() => {
-        fetch(`https://damp-bayou-69353.herokuapp.com/car-list`)
+        fetch(`https://carz-server.onrender.com/car-list`)
             .then(res => res.json())
             .then(data => setProducts(data));
     }, []);
@@ -33,7 +33,7 @@ const GeneralDashboar = () => {
     const [myorders, setMyorders] = useState({});
 
     useEffect(() => {
-        fetch(`https://damp-bayou-69353.herokuapp.com/my-order/${user.email}`)
+        fetch(`https://carz-server.onrender.com/my-order/${user.email}`)
             .then(res => res.json())
             .then(data => setMyorders(data));
     }, [myorders]);
@@ -56,7 +56,7 @@ const GeneralDashboar = () => {
 
                 if (deleteOrder) {
                     // send data to backend
-                    fetch(`https://damp-bayou-69353.herokuapp.com/cancel-order/${id}`, {
+                    fetch(`https://carz-server.onrender.com/cancel-order/${id}`, {
                         method: 'DELETE'
                     })
                         .then(res => res.json())

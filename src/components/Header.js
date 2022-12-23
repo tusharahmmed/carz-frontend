@@ -12,7 +12,7 @@ const Header = ({ position }) => {
     const [productItems, setProductItems] = useState([]);
 
     useEffect(() => {
-        fetch('https://damp-bayou-69353.herokuapp.com/car-list')
+        fetch('https://carz-server.onrender.com/car-list')
             .then(res => res.json())
             .then(data => setProductItems(data));
     }, [])
@@ -20,8 +20,12 @@ const Header = ({ position }) => {
     // menu li
     const menuItems = (id, title, isMobile) => {
 
+        // console.log(title);
+
         const titleArr = title.split(" ");
         const titleText = titleArr.slice(1, 3).join(" ");
+
+        console.log(titleText);
 
         if (!isMobile) {
             return (
@@ -49,7 +53,7 @@ const Header = ({ position }) => {
             </Link></Logo>
             <Menu>
                 {
-                    productItems.length ? productItems.map((item) => menuItems(item._id, item.model)) : ' '
+                    productItems?.length ? productItems.map((item) => menuItems(item._id, item.model,false)) : ' '
                 }
 
             </Menu>

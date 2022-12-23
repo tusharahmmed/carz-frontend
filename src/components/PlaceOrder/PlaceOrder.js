@@ -20,7 +20,7 @@ const PlaceOrder = () => {
     // get data data
     const { id } = useParams();
     useEffect(() => {
-        fetch(`https://damp-bayou-69353.herokuapp.com/car/${id}`)
+        fetch(`https://carz-server.onrender.com/car/${id}`)
             .then(res => res.json())
             .then(data => setItem(data));
     }, []);
@@ -36,7 +36,7 @@ const PlaceOrder = () => {
         data.product = item;
 
         // send to backend
-        fetch('https://damp-bayou-69353.herokuapp.com/place-order', {
+        fetch('https://carz-server.onrender.com/place-order', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

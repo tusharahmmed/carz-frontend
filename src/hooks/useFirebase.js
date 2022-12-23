@@ -20,7 +20,7 @@ const useFirebase = () => {
     // check admin level
     useEffect(() => {
         // send to server
-        fetch(`https://damp-bayou-69353.herokuapp.com/check-admin/${user.email}`, {
+        fetch(`https://carz-server.onrender.com/check-admin/${user.email}`, {
             method: 'POST',
         })
             .then(res => res.json())

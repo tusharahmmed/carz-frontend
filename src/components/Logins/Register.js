@@ -49,7 +49,7 @@ const Register = () => {
             registerUser(email, password, fullName, location, history);
 
             // create user to database
-            fetch('https://damp-bayou-69353.herokuapp.com/create-user', {
+            fetch('https://carz-server.onrender.com/create-user', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

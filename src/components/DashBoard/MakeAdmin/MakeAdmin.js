@@ -24,7 +24,7 @@ const MakeAdmin = () => {
 
                 if (makeAdmin) {
                     // send data to backend
-                    fetch('https://damp-bayou-69353.herokuapp.com/create-new-admin', {
+                    fetch('https://carz-server.onrender.com/create-new-admin', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'

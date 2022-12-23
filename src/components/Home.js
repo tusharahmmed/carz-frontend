@@ -8,7 +8,7 @@ const Home = () => {
 
     // get data
     useEffect(() => {
-        fetch(`https://damp-bayou-69353.herokuapp.com/car-list`)
+        fetch(`https://carz-server.onrender.com/car-list`)
             .then(res => res.json())
             .then(data => setCars(data))
     }, []);

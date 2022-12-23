@@ -28,7 +28,7 @@ const AddCar = () => {
         e.preventDefault();
 
         // send to server
-        fetch('https://damp-bayou-69353.herokuapp.com/add-car',{
+        fetch('https://carz-server.onrender.com/add-car',{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

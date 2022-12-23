@@ -16,7 +16,7 @@ const Dteails = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        fetch(`https://damp-bayou-69353.herokuapp.com/car/${id}`)
+        fetch(`https://carz-server.onrender.com/car/${id}`)
             .then(res => res.json())
             .then(data => setItem(data));
     }, [])
